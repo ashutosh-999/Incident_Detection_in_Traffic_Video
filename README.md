@@ -6,7 +6,7 @@ anomaly detection.
 
 Authors: Ashutosh Naik
 
-Department of Computer Science and Engineering
+Department of Electronics and Electrical Communication Engineering
 
 Indian Institute of Technology Kharagpur
 
