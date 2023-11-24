@@ -1,47 +1,22 @@
-## [Memory-augmented Online Video Anomaly Detection (MOVAD)](https://arxiv.org/abs/2302.10719)
-
-Official PyTorch implementation of **MOVAD**.
-
-We propose **MOVAD**, a brand new architecture for online (frame-level) video
+## Incident Detection in Traffic Video
+We propose **MOVAD** architecture for online (frame-level) video
 anomaly detection.
 
 ![MOVAD Architurecture](images/arch.jpg)
 
-Authors: Leonardo Rossi, Vittorio Bernuzzi, Tomaso Fontanini,
-         Massimo Bertozzi, Andrea Prati.
+Authors: Ashutosh Naik
 
-[IMP Lab](http://implab.ce.unipr.it/) -
-Dipartimento di Ingegneria e Architettura
+Department of Computer Science and Engineering
 
-University of Parma, Italy
+Indian Institute of Technology Kharagpur
 
 ## Abstract
 
-The ability to understand the surrounding scene is of paramount importance for
-Autonomous Vehicles (AVs).
+The advent of Autonomous Vehicles (AVs) has underscored the critical need for robust incident detection systems to ensure the safety and efficiency of road transportation. This report introduces a novel real-time incident detection system, named RTID, designed to operate in an online fashion, providing immediate responses to anomalies detected in the vicinity of AVs. The system relies solely on video data captured by a dashboard-mounted camera, making it a cost-effective and practical solution for widespread implementation.
 
-This paper presents a system capable to work in an online fashion,
-giving an immediate response to the arise of anomalies surrounding the AV,
-exploiting only the videos captured by a dash-mounted camera.
+The core architecture of RTID, comprising two key modules, leverages a Short-Term Memory Module and a Long-Term Memory Module. The former, implemented through a Video Swin Transformer (VST), focuses on extracting information related to ongoing actions by processing RGB frames. Meanwhile, the latter integrates a Long-Short Term Memory (LSTM) network into the classifier, allowing for the consideration of remote past information and action context. The modular design of RTID contributes to its ease of implementation and adaptability, facilitating experimentation and customization.
 
-Our architecture, called MOVAD, relies on two main modules:
-a Short-Term Memory Module to extract information related to the ongoing
-action, implemented by a Video Swin Transformer (VST), and a Long-Term Memory
-Module injected inside the classifier that considers also remote past
-information and action context thanks to the use of a Long-Short Term
-Memory (LSTM) network.
-
-The strengths of MOVAD are not only linked to its excellent performance, but
-also to its straightforward and modular architecture, trained in a end-to-end
-fashion with only RGB frames with as less assumptions as possible, which
-makes it easy to implement and play with.
-
-We evaluated the performance of our method on Detection of Traffic Anomaly
-(DoTA) dataset, a challenging collection of dash-mounted camera videos of
-accidents.
-
-After an extensive ablation study, MOVAD is able to reach an AUC score of
-82.17\%, surpassing the current state-of-the-art by $+2.87$ AUC.
+The strengths of RTID extend beyond its exceptional performance, encompassing its straightforward architecture and end-to-end training methodology with minimal assumptions. These features not only contribute to its ease of implementation but also position RTID as a versatile tool for addressing diverse real-world scenarios. The report concludes with the affirmation that RTID represents a significant advancement in incident detection technology, holding great promise for enhancing the safety and reliability of autonomous and conventional vehicular systems alike.
 
 ## Usage
 
@@ -176,33 +151,3 @@ Comparison with the state of the art.
 | :-: | :---------: | :-----------: | :---: | :----------------: |
 | 9 | Our (MOVAD) | RGB (320x240) | 80.09 | [conf](cfgs/v4_1.yml) |
 | 10 | Our (MOVAD) | RGB (640x480) | 82.17 | [conf](cfgs/v4_2.yml) |
-
-## License
-
-See [GPL v2](./LICENSE) License.
-
-## Acknowledgement
-
-This research benefits from the HPC (High Performance Computing) facility
-of the University of Parma, Italy.
-
-## Citation
-
-If you find our work useful in your research, please cite:
-
-```
-@misc{https://doi.org/10.48550/arxiv.2302.10719,
-  doi = {10.48550/ARXIV.2302.10719},
-  url = {https://arxiv.org/abs/2302.10719},
-  author = {Rossi, Leonardo and Bernuzzi, Vittorio and Fontanini, Tomaso and Bertozzi, Massimo and Prati, Andrea},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences, F.1.1, 68-02, 68-04, 68-06, 68T07, 68T10, 68T45},
-  title = {Memory-augmented Online Video Anomaly Detection},
-  publisher = {arXiv},
-  year = {2023},
-  copyright = {Creative Commons Attribution Share Alike 4.0 International}
-}
-```
-
-#� �I�n�c�i�d�e�n�t�_�D�e�t�e�c�t�i�o�n�_�i�n�_�T�r�a�f�f�i�c�_�V�i�d�e�o�_�1�
-�
-�
